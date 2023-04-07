@@ -14,7 +14,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="67" value="purchase_record" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;labelBorderColor=none;strokeColor=default;" vertex="1" parent="91">
-                    <mxGeometry x="-20.003333333333334" y="42.85714285714286" width="133.33333333333334" height="100.36974789915968" as="geometry"/>
+                    <mxGeometry x="-10.003333333333334" y="39.99714285714286" width="133.33333333333334" height="100.36974789915968" as="geometry"/>
                 </mxCell>
                 <mxCell id="68" value="name" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;labelBorderColor=none;" vertex="1" parent="67">
                     <mxGeometry y="26" width="133.33333333333334" height="37.81512605042018" as="geometry"/>
@@ -80,7 +80,7 @@
                     <mxGeometry y="204" width="160" height="34" as="geometry"/>
                 </mxCell>
                 <mxCell id="94" value="" style="group" vertex="1" connectable="0" parent="1">
-                    <mxGeometry x="650" y="150" width="160" height="228" as="geometry"/>
+                    <mxGeometry x="660" y="150" width="160" height="228" as="geometry"/>
                 </mxCell>
                 <mxCell id="21" value="shipping_adress " style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;labelBorderColor=none;strokeColor=default;" vertex="1" parent="94">
                     <mxGeometry width="160" height="126" as="geometry"/>
@@ -124,16 +124,16 @@
                         <mxPoint x="500" y="230" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="123" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERmandOne;elbow=vertical;curved=1;entryX=0.656;entryY=-0.037;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="49" target="11">
+                <mxCell id="123" value="" style="edgeStyle=orthogonalEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERmandOne;elbow=vertical;curved=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="49" target="11">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="210" y="80" as="sourcePoint"/>
-                        <mxPoint x="275" y="390.1999999999999" as="targetPoint"/>
+                        <mxPoint x="130" y="160" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="124" value="" style="fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;elbow=vertical;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="68">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="580" y="280" as="sourcePoint"/>
-                        <mxPoint x="650" y="278" as="targetPoint"/>
+                        <mxPoint x="660" y="275" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="125" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;curved=1;elbow=vertical;entryX=-0.007;entryY=0.903;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="14" target="68">
