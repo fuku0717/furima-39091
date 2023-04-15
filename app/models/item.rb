@@ -10,5 +10,24 @@ class Item < ApplicationRecord
   validates :user, presence: true
 
   has_one_attached :image
-  
+  belongs_to :user
+
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :prefecture_id 
+  validates :prefecture_id, presence: true, numericality: { other_than: 1 , message: "can't be blank" }
+
+  belongs_to :days_to_ship_id
+  validates :days_to_ship_id, presence: true, numericality: { other_than: 1 , message: "can't be blank" }
+
+  belongs_to :category_id
+  validates :category_id, presence: true, numericality: { other_than: 1 , message: "can't be blank" }
+
+  belongs_to :condition_id
+  validates :category_id, presence: true, numericality: { other_than: 1 , message: "can't be blank" }
+
+  belongs_to :shipping_charge_id
+  validates :category_id, presence: true, numericality: { other_than: 1 , message: "can't be blank" }
+
+
 end
