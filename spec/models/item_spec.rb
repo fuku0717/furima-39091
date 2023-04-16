@@ -56,15 +56,25 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end
-      it 'priceが半角数値以外だと保存できない' do
+      it '価格が半角数値以外だと保存できない' do
         @item.price = "２０００"
         @item.valid?
         expect(@item.errors.full_messages).to include("Price is abailable only half-width number")
       end
-      it '価格が¥300~¥9,999,999の間以外だと保存できない' do
+      it '価格が¥300未満だと保存できない' do
         @item.price = "200"
         @item.valid?
         expect(@item.errors.full_messages).to include("Price is out of setting range")
+      end
+      it '価格が¥9,999,999を超えると保存できない' do
+        @item.price = "10000000"
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price is out of setting range")
+      end
+      it 'userが紐付いていない場合は登録できない' do
+        @item.user = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include('User must exist')
       end
     end
   end

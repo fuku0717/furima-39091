@@ -3,9 +3,8 @@ class Item < ApplicationRecord
   validates :item_name, presence: true
   validates :explanation, presence: true
   validates :price, presence: true
-  validates :price, numericality: { with: /\A[0-9]+\z/, message: 'is abailable only half-width number' }
+  validates :price, numericality: { only_integer: true, message: 'is abailable only half-width number' }
   validates :price, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999, message: 'is out of setting range' }
-  validates :user, presence: true
 
   belongs_to :user
   has_one_attached :image
