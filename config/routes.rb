@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:edit, :update]
 
+  #resources :purchase_records, only: [:index, :create]
+
   
 end
