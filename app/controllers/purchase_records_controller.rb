@@ -2,12 +2,12 @@ class PurchaseRecordsController < ApplicationController
    before_action :authenticate_user!
 
    def index
-     @items = Item.find(params[:item_id])
+     @item = Item.find(params[:item_id])
      @shipping_address = ShippingAddress.new
    end
 
    def create
-     @items = Item.find(params[:item_id])
+     @item = Item.find(params[:item_id])
      @shipping_address = ShippingAddress.new(shipping_address_params)
      if @shipping_address.valid?
         @shipping_address.save
