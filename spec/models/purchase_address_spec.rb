@@ -3,9 +3,11 @@ require 'rails_helper'
 RSpec.describe PurchaseAddress, type: :model do
   describe '商品購入記録の保存' do
     before do
-       user = FactoryBot.create(:user)
-       item = FactoryBot.create(:item)
-       @purchase_address = FactoryBot.build(:purchase_address, user_id: user.id, item_id: item.id)
+       @user = FactoryBot.create(:user)
+       @item = FactoryBot.build(:item, user_id: @user.id)
+       @item.image = fixture_file_upload('public/images/test_image.png')
+       @item.save
+       @purchase_address = FactoryBot.build(:purchase_address, user_id: @user.id, item_id: @item.id)
     end
 
     context '内容に問題ない場合' do
