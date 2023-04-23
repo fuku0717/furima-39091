@@ -15,9 +15,7 @@ class PurchaseAddress
     validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
 
     def save
-      @purchase_adress = PurchaseAddress.create(user_id: user_id, item_id: item_id)
-
-      PurchaseAddress.create(post_code: post_code, prefecture_id: prefecture_id, municipalities: municipalities, address: address, building_name: building_name,
-                     telephone_number: telephone_number, purchase_record: purchase_record)
+      purchase_record = PurchaseRecord.create(user_id: user_id, item_id: item_id)
+      ShippingAddress.create(post_code: post_code, prefecture_id: prefecture_id, municipalities: municipalities, address: address, building_name: building_name, telephone_number: telephone_number, purchase_record_id: purchase_record.id )
     end
 end
