@@ -54,7 +54,7 @@ class ItemsController < ApplicationController
   end
 
   def ensure_current_user
-    if @item.user_id != current_user.id
+    if @item.user_id != current_user.id || @item.purchase_record != nil
       redirect_to action: :index
     end
   end
