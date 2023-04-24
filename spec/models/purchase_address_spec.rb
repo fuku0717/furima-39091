@@ -1,15 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe PurchaseAddress, type: :model do
-  describe '商品購入記録の保存' do
     before do
        @user = FactoryBot.create(:user)
-       @item = FactoryBot.build(:item, user_id: @user.id)
-       @item.image = fixture_file_upload('public/images/test_image.png')
-       @item.save
+       @item = FactoryBot.create(:item)
        @purchase_address = FactoryBot.build(:purchase_address, user_id: @user.id, item_id: @item.id)
     end
 
+  describe '商品購入記録の保存' do
     context '内容に問題ない場合' do
       it 'すべての値が正しく入力されていれば購入できること' do
         expect(@purchase_address).to be_valid
@@ -19,7 +17,6 @@ RSpec.describe PurchaseAddress, type: :model do
         expect(@purchase_address).to be_valid
       end
     end
-
     context '内容に問題がある場合' do
       it '郵便番号は空では保存できないこと' do
         @purchase_address.post_code = ''
