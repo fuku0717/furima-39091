@@ -18,4 +18,12 @@ ja:
         shipping_charge_id: 配送料の負担
         prefecture_id: 発送元の地域
         days_to_ship_id: 発送までの日数
-     
+  activemodel:
+    attributes:
+      purchase_address:
+        post_code: 郵便番号
+        prefecture_id: 都道府県
+        municipalities: 市区町村
+        address: 番地
+        telephone_number: 電話番号
+        token: クレジットカード情報

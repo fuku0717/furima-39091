@@ -3,7 +3,7 @@ class PurchaseAddress
   attr_accessor :post_code, :prefecture_id, :municipalities, :address, :building_name, :telephone_number, :user_id, :item_id, :token
 
   with_options presence: true do
-    validates :post_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)"}
+    validates :post_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "は、「3桁ハイフン4桁」の半角文字列のみ保存可能です"}
     validates :municipalities
     validates :address
     validates :telephone_number, format: {with: /\A\d{10,11}\z/}
@@ -12,7 +12,7 @@ class PurchaseAddress
     validates :token
   end
 
-    validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
+    validates :prefecture_id, numericality: { other_than: 1, message: "を入力してください" }
 
     def save
       purchase_record = PurchaseRecord.create(user_id: user_id, item_id: item_id)
